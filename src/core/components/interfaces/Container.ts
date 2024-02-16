@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
+import { BreakpointType } from "../../types";
 
 
-type BreakpointType = "fluid" | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 export interface IPropsContainer {
   children: ReactNode,

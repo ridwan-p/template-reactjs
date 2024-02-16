@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-
-type ColorType = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark'
+import { ColorType } from "../../types";
 
 export interface IPropsAlert {
   children: ReactNode
