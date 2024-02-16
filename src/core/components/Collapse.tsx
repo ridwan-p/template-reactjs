@@ -80,7 +80,6 @@ export const Collapse = ({
       onExited={handleOnExited}
       onExiting={handleOnExiting}
       onExit={handleOnExit}
-
     >
       {state => {
         const transitionClass = transitionStateToClass[state] || 'collapse';

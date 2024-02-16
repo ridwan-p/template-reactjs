@@ -24,7 +24,7 @@ export interface IPrposAccordionItem {
   children: ReactNode
 }
 
-export type ToggleParamsAccordion = {
+export interface ToggleParamsAccordion  {
   key: number
   isOpen: boolean
 }
