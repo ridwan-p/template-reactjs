@@ -1,13 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login from "../views/screens/Auth/Login";
-import Register from "../views/screens/Auth/Register";
-import Dashboard from "../views/screens/Dashboard/Dashboard";
+import { lazy } from "react";
 
+const Login = lazy(() => import("../views/screens/Auth/Login"));
+const Register = lazy(() => import("../views/screens/Auth/Register"));
+const Dashboard = lazy(() => import("../views/screens/Dashboard/Dashboard"));
+const Home = lazy(() => import("../views/screens/Home"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Home />,
   },
   {
     path: "/login",
