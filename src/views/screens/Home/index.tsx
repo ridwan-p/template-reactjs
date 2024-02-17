@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Accordion, Alert, Badge, Breadcrumb, Collapse, Container } from '../../../core/components';
 import { ToggleParamsAccordion } from '../../../core/components/interfaces';
-import { Button } from '../../../core/components/Button';
+import { Button, ButtonGroup } from '../../../core/components/Button';
 
 export const Home = () => {
   const [isOpenCollapse, setIsOpenCollapse] = useState(false);
@@ -77,7 +77,18 @@ export const Home = () => {
         <div><Button color='danger' isOutline>danger</Button></div>
         <div><Button color='primary' isOutline size='sm'>primary</Button></div>
         <div><Button color='primary' isOutline size='lg'>primary</Button></div>
-
+      </div>
+      <div className="my-2 d-flex gap-2">
+        <ButtonGroup>
+          <Button color='primary'>Left</Button>
+          <Button color='primary'>Middle</Button>
+          <Button color='primary'>Right</Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button isOutline color='primary'>Left</Button>
+          <Button isOutline color='primary'>Middle</Button>
+          <Button isOutline color='primary'>Right</Button>
+        </ButtonGroup>
       </div>
       <Collapse isOpen={isOpenCollapse} >
         <div className="card" style={{ width: 300 }}>
