@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Accordion, Alert, Badge, Breadcrumb, Collapse, Container } from '../../../core/components';
 import { ToggleParamsAccordion } from '../../../core/components/interfaces';
+import { Button } from '../../../core/components/Button';
 
 export const Home = () => {
   const [isOpenCollapse, setIsOpenCollapse] = useState(false);
@@ -60,6 +61,23 @@ export const Home = () => {
             { label: "Data", isActive: true },
           ]}
         />
+      </div>
+      <div className="d-flex gap-2">
+        <div><Button color='primary' >primary</Button></div>
+        <div><Button color='secondary' >secondary</Button></div>
+        <div><Button color='success' >success</Button></div>
+        <div><Button color='warning' >warning</Button></div>
+        <div><Button color='info' >info</Button></div>
+        <div><Button color='danger' >danger</Button></div>
+        <div><Button color='primary' isOutline>primary</Button></div>
+        <div><Button color='secondary' isOutline>secondary</Button></div>
+        <div><Button color='success' isOutline>success</Button></div>
+        <div><Button color='warning' isOutline>warning</Button></div>
+        <div><Button color='info' isOutline>info</Button></div>
+        <div><Button color='danger' isOutline>danger</Button></div>
+        <div><Button color='primary' isOutline size='sm'>primary</Button></div>
+        <div><Button color='primary' isOutline size='lg'>primary</Button></div>
+
       </div>
       <Collapse isOpen={isOpenCollapse} >
         <div className="card" style={{ width: 300 }}>
