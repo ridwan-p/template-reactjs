@@ -8,7 +8,8 @@ export const Badge = ({
   children,
   className,
   color,
-  isRounded
+  isRounded,
+  ...props
 }: IPropsBadge) => {
   const colorClass = useMemo(() => color && `text-bg-${color}`, [color])
   return (
@@ -21,6 +22,7 @@ export const Badge = ({
         },
         className
       )}
+      {...props}
     >
       {children}
     </Element>

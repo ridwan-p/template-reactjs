@@ -3,6 +3,7 @@ import { ColorType } from "../../types";
 
 
 export interface IPropsBadge {
+  [key:string]: unknown
   element?: ElementType
   children: ReactNode
   className?: string
