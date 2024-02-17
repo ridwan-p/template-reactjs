@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { useMemo } from "react";
 import { IPropsAlert } from './interfaces/Alert';
+import { ButtonClose } from './Button';
 
 
 export const Alert = ({
@@ -23,7 +24,7 @@ export const Alert = ({
       role='alert'
     >
       <div>{children}</div>
-      {isDismissible && <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>}
+      {isDismissible && <ButtonClose type="button" data-bs-dismiss="alert" />}
     </div>
   )
 }

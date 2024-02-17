@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useMemo } from "react";
-import { IPropsButton, IPropsButtonGroup } from './interfaces';
+import { IPropsButton, IPropsButtonClose, IPropsButtonGroup } from './interfaces';
 
 export const Button = ({
   element: Element = 'button',
@@ -31,6 +31,7 @@ export const Button = ({
     </Element>
   )
 }
+
 export const ButtonGroup = ({
   element: Element = 'div',
   children,
@@ -54,5 +55,26 @@ export const ButtonGroup = ({
     >
       {children}
     </Element>
+  )
+}
+
+
+export const ButtonClose = ({
+  element: Element = 'button',
+  className,
+  isDisabled,
+  ...props
+}: IPropsButtonClose) => {
+
+  return (
+    <Element
+      className={clsx(
+        'btn-close',
+        className
+      )}
+      aria-label="Close"
+      disabled={isDisabled}
+      {...props}
+    />
   )
 }

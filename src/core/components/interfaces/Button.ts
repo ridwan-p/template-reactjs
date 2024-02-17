@@ -19,3 +19,9 @@ export interface IPropsButtonGroup {
   size?: ButtonSizeType
   isVertical?: boolean
 }
+export interface IPropsButtonClose {
+  [key:string]: unknown
+  element?: ElementType
+  className?: string
+  isDisabled?: boolean
+}
