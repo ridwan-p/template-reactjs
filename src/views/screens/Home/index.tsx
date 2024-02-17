@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Accordion, Alert, Badge, Collapse, Container } from '../../../core/components';
+import { Accordion, Alert, Badge, Breadcrumb, Collapse, Container } from '../../../core/components';
 import { ToggleParamsAccordion } from '../../../core/components/interfaces';
 
 export const Home = () => {
@@ -51,6 +51,15 @@ export const Home = () => {
         <Badge color='warning'>warning</Badge>
         <Badge color='info'>info</Badge>
         <Badge color='danger'>danger</Badge>
+      </div>
+      <div className="my-1">
+        <Breadcrumb
+          items={[
+            { label: <a href='#home'>Home</a> },
+            { label: <a href='#libary'>Libary</a> },
+            { label: "Data", isActive: true },
+          ]}
+        />
       </div>
       <Collapse isOpen={isOpenCollapse} >
         <div className="card" style={{ width: 300 }}>
