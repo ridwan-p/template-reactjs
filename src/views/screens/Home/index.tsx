@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Accordion, Alert, Badge, Breadcrumb, Collapse, Container } from '../../../core/components';
+import { Accordion, Alert, Badge, Breadcrumb, Card, CardBody, CardFooter, CardHeader, CardText, CardTitle, Col, Collapse, Container, Row } from '../../../core/components';
 import { ToggleParamsAccordion } from '../../../core/components/interfaces';
 import { Button, ButtonGroup } from '../../../core/components/Button';
 
@@ -90,14 +90,30 @@ export const Home = () => {
           <Button isOutline color='primary'>Right</Button>
         </ButtonGroup>
       </div>
-      <Collapse isOpen={isOpenCollapse} >
-        <div className="card" style={{ width: 300 }}>
-          <div className="card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
-        </div>
-      </Collapse>
-      <button onClick={() => { setIsOpenCollapse(!isOpenCollapse) }}>Click</button>
+      <div className="my-2">
+        <Row>
+          <Col xs={3} md={6}>
+            <Card>
+              <CardHeader>Featured</CardHeader>
+              <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+              </CardBody>
+              <CardFooter>2 days ago</CardFooter>
+            </Card>
+          </Col>
+          <Col>
+            <Card color='primary'>
+              <CardHeader>Featured</CardHeader>
+              <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+              </CardBody>
+              <CardFooter>2 days ago</CardFooter>
+            </Card>
+          </Col>
+        </Row>
+      </div>
     </Container>
   )
 }

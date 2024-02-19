@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { IPropsCollapse } from './interfaces/Collapse';
+import { IPropsCollapse } from './interfaces';
 import { Transition } from 'react-transition-group';
 import { useRef, useState } from 'react';
 import { TransitionTimeouts, TransitionStates } from '../constants/transitions';

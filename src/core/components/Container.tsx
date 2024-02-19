@@ -1,17 +1,22 @@
 import clsx from 'clsx';
 import { useMemo } from "react";
-import { IPropsContainer } from './interfaces/Container';
+import { IPropsContainer } from './interfaces';
 
 
 export const Container = ({
+  element: Element = 'div',
   children,
   className,
-  breakpoint
+  breakpoint,
+  ...props
 }: IPropsContainer) => {
   const containerClass = useMemo(() => breakpoint ? `container-${breakpoint}` : `container`, [breakpoint])
   return (
-    <div className={clsx(containerClass, className)}>
+    <Element
+      className={clsx(containerClass, className)}
+      {...props}
+    >
       {children}
-    </div>
+    </Element>
   )
 }
